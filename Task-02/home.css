@@ -1,0 +1,283 @@
+ /* ======== Media Mobile============= */
+ @media only screen and (max-width: 622px) {
+     .card-container {
+         height: 100vh;
+     }
+
+     .card {
+         width: 520px;
+         /* height: 950px; */
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-wrap: wrap;
+         padding-top: 35px;
+         margin: 0 25px;
+     }
+
+     .img-container {
+         width: 250px;
+         height: 330px;
+     }
+
+     .kiri {
+         margin: 0;
+     }
+
+     .kanan {
+         margin: 0;
+     }
+
+     .text h2 {
+         letter-spacing: normal;
+     }
+
+     .button-container {
+         width: 100%;
+         justify-content: space-evenly;
+     }
+
+     .icon {
+         width: 100%;
+         justify-content: center;
+         margin-top: 55px;
+         gap: 40px;
+     }
+
+ }
+
+ /* ======== Media Tablet============= */
+ @media only screen and (min-width: 622px) {
+
+     .card-container {
+         height: 100vh;
+     }
+
+     .card {
+         width: 822px;
+         flex-wrap: wrap;
+         margin: 0 25px;
+         padding-top: 35px;
+         margin-top: 55px;
+         margin-right: 35px;
+     }
+
+     .img-container {
+         width: 250px;
+         height: 330px;
+     }
+
+     .kiri {
+         margin: 0;
+     }
+
+     .kanan {
+         margin: 0;
+     }
+
+     .text h2 {
+         letter-spacing: normal;
+     }
+
+     .button-container {
+         width: 100%;
+         justify-content: space-evenly;
+     }
+
+     .icon {
+         width: 100%;
+         justify-content: center;
+         margin-top: 55px;
+         gap: 40px;
+     }
+
+
+
+
+ }
+
+ /* ======== Media Desktop/Laptop============= */
+ @media only screen and (min-width: 992px) {
+     .card {
+         width: 1100px;
+         height: 600px;
+     }
+
+     .img-container {
+         height: 430px;
+         width: 325px;
+         margin-right: 20px;
+     }
+
+     .kiri {
+         width: 55%;
+         /* background: blue; */
+         margin: 35px 0;
+     }
+
+     .kanan {
+         /* background: blue; */
+         width: 35%;
+         margin: 0;
+     }
+
+     .button-container {
+         justify-content: start;
+
+     }
+
+     .icon {
+         width: 100%;
+         gap: 20px;
+         justify-content: start;
+         margin-top: 35px;
+         margin-left: 25px;
+     }
+ }
+
+ /* ======== All / root============= */
+
+ .card-container {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-color: #ccc;
+ }
+
+ .card {
+     background-color: hsl(0, 0%, 100%);
+     flex-direction: row;
+     box-shadow: 0 0 12px 5px rgba(0, 0, 0, 0.349);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     border-radius: 15px;
+ }
+
+ /* ================ kiri =============== */
+ .kiri {
+     /* width: 70vh; */
+     padding: 0 35px;
+ }
+
+ .text h2 {
+     display: flex;
+     justify-content: start;
+     margin-bottom: 35px;
+ }
+
+ p {
+     text-align: justify;
+     font-size: 15px;
+     margin-bottom: 55px;
+ }
+
+ .icon-contain {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+ }
+
+ .icon {
+     display: flex;
+ }
+
+ .icon i {
+     font-size: 45px;
+ }
+
+ .button-container {
+     display: flex;
+     align-items: center;
+ }
+
+ .button-container a {
+     text-decoration: none;
+     color: black;
+     font-weight: bold;
+ }
+
+ a i {
+     font-size: 25px;
+     margin-left: 15px;
+ }
+
+ button {
+     display: flex;
+     text-align: center;
+     align-items: center;
+     justify-content: center;
+     width: 105px;
+     height: 35px;
+     background-color: black;
+     border-radius: 25px;
+     margin-right: 25px;
+ }
+
+ a button:hover {
+     border: black 2px solid;
+     background-color: rgba(122, 122, 122, 0.349);
+     color: black;
+     cursor: pointer;
+ }
+
+ a button {
+     color: white;
+     font-weight: bold;
+ }
+
+ /* ================ Kanan =============== */
+ .kanan {
+     /* width: 50vh; */
+     height: 400px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     /* background-color: blue; */
+ }
+
+ .img-container {
+     box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.349);
+     border-radius: 10px;
+     margin-bottom: 15px;
+     display: flex;
+     flex-direction: column;
+ }
+
+ .img {
+     width: 100%;
+     height: 80%;
+     background-image: url(FotoSelfie.jfif);
+     border-radius: 10px 10px 0 0;
+     box-sizing: border-box;
+     background-size: cover;
+     background-position: center;
+ }
+
+ .nama-container {
+     padding: 10px;
+ }
+
+ .nama {
+     display: flex;
+     flex-direction: column;
+     margin: 0;
+     font-size: 30px;
+     font-weight: bold;
+ }
+
+ .status {
+     font-size: small;
+     font-size: 15px;
+     font-family: 'Times New Roman', Times, serif;
+ }
+
+ /* =================Navigasi============== */
+ .button-container a {
+     margin-left: 20px;
+     display: flex;
+     gap: 15px;
+     justify-content: center;
+ }
