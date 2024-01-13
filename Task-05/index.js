@@ -23,34 +23,35 @@ function add(notRefresh) {
     let linkImage = URL.createObjectURL(image[0])
 
     // ===============Date=================
-    // startDate.setHours(0, 0, 0, 0)
-    // endDate.setHours(0, 0, 0, 0)
+    startDate.setHours(0, 0, 0, 0)
+    endDate.setHours(0, 0, 0, 0)
 
-    // let oneDay = 24 * 60 * 60 * 1000
-    // let oneMonth = 31 * 24 * 60 * 60 * 1000
-    // let oneYear = 12 * 31 * 24 * 60 * 60 * 1000
+    let oneDay = 24 * 60 * 60 * 1000
+    let oneMonth = 31 * 24 * 60 * 60 * 1000
+    let oneYear = 12 * 31 * 24 * 60 * 60 * 1000
 
-    // let selisih = Math.abs(endDate - startDate)
-    // let day = Math.round(selisih / oneDay)
-    // let month = Math.round(selisih / oneMonth)
-    // let year = Math.round(selisih / oneYear)
+    let selisih = Math.abs(endDate - startDate)
+    let day = Math.round(selisih / oneDay)
+    let month = Math.round(selisih / oneMonth)
+    let year = Math.round(selisih / oneYear)
 
-    // let durasi = ""
+    let durasi = ""
 
-    // if (day < 30) {
-    //     durasi += day + " day"
+    if (day < 30) {
+        durasi += day + " day"
 
-    // } else if (month < 12) {
-    //     durasi += month + " month"
-    // } else {
-    //     durasi += year + " year"
-    // }
+    } else if (month < 12) {
+        durasi += month + " month"
+    } else {
+        durasi += year + " year"
+    }
+
 
 
     let add = {
         projectName,
         decription,
-        // durasi,
+        durasi,
         // ===============ChexBox=================
         NodeJs,
         Html5,
@@ -96,8 +97,8 @@ function clickAdd() {
                 <span>${blogAdd[index].projectName}</span>
             </div>
             <div class="durasi">
-            <!-- <span>durasi : ${blogAdd[index].durasi}</span> -->
-                <span>durasi : ${new Date()}</span>
+             <span>durasi : ${blogAdd[index].durasi}</span>
+             <!-- <span>durasi : ${new Date()}</span>  -->
             </div>
             <!-- ============ article ================ -->
             <span class="article">${blogAdd[index].decription}</span>

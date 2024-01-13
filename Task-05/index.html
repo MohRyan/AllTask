@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- ============= FavIcon ============== -->
     <link rel="icon" type="image/png" href="/Navbar/faviconlogo.png">
-    <title>Task 04</title>
+    <title>TASK 05</title>
     <!-- ============= IconFontAwesome ============== -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- ============= FontGoogle ============== -->
@@ -18,8 +18,9 @@
     <!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/js/bootstrap.js">
  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css"> -->
     <!-- ============= CssExternal ============== -->
+    <!-- <link rel="stylesheet" href="mediaResponsive.css"> -->
     <link rel="stylesheet" href="/Navbar/navbar.css">
-    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
@@ -58,7 +59,7 @@
     <!-- ======================= EndNav =============================== -->
     <div class="container">
         <form class="form" onsubmit="add(event)">
-            <h1>Task 04</h1>
+            <h1 class="judul">Task 05</h1>
             <h2>ADD MY PROJECT</h2>
             <div class="name-conten">
                 <span class="category">Project Name</span>
@@ -132,24 +133,33 @@
                     <i class="fa-solid fa-paperclip"></i>
                 </div>
             </div>
-            <div class="btn-navigasi">
-                <!-- <a href="/04vidpres.html"><button>Video</button></a> -->
-                <a href=""><button>Submit</button></a>
-            </div>
+            <!-- ==============button============== -->
+            <section class="btn-navigasi">
+
+                <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                    <a href="">
+                        <button>submit</button>
+                    </a>
+                    <a href="#blog"><i style="font-size: xx-large; margin-top: 5px;"
+                            class="fa-solid fa-arrow-alt-circle-down"></i></a>
+                </div>
+            </section>
         </form>
-        <!-- ==============button============== -->
-        <div class="blog">
-            <h1>MY PROJECT</h1>
-            <a class="video" href="#"><button>Video</button></a>
-            <div class="blog-container" id="conten-blog">
-                <!-- ============ ContenPush ================ -->
+        <section id="blog">
+            <div class="blog">
+                <h1>MY PROJECT</h1>
+                <a href="/05vidpres.html">
+                    <button>Video</button>
+                </a>
+                <div class="blog-container" id="conten-blog">
+                    <!-- ============ ContenPush ================ -->
 
+                </div>
             </div>
-        </div>
+        </section>
     </div>
-
 </body>
-
+<script src="Navbar/navbar.js"></script>
 <script src="index.js"></script>
 </body>
 
