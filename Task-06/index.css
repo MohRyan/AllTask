@@ -4,16 +4,11 @@
      /* ==============Start Form==============  */
      .container {
          background-color: snow;
-
      }
 
      .form {
          width: 525px;
          height: 100vh;
-     }
-
-     .judul {
-         margin-top: 60px;
      }
 
      .name-conten {
@@ -74,6 +69,7 @@
 
      .blog {
          width: 622px;
+         margin-top: 200px;
          background-color: #e5e5e5;
      }
 
@@ -105,13 +101,6 @@
 
  /* ======== Media Tablet============= */
  @media only screen and (min-width: 622px) {
-     .container {
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         flex-direction: column;
-     }
-
      .form {
          width: 750px;
          height: 100vh;
@@ -149,11 +138,11 @@
      }
 
      .baris2 {
-         width: 100%;
+         width: 120%;
      }
 
      .baris3 {
-         width: 80%;
+         width: 140%;
      }
 
      .baris4 {
@@ -173,9 +162,8 @@
      /* ==============Start Blog==============  */
 
      .blog {
-         height: 100vh;
-         /* width: 850px;
-        background-color: #e5e5e5; */
+         width: 100%;
+         background-color: #e5e5e5;
      }
 
      .blog-container {
@@ -203,18 +191,9 @@
 
  /* ======== Media Desktop/Laptop============= */
  @media only screen and (min-width: 992px) {
-     .container {
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         flex-direction: column;
-
-     }
-
      .blog {
-         height: 100vh;
-         /* width: 850px;
-        background-color: #e5e5e5; */
+         width: 100%;
+         background-color: #e5e5e5;
      }
 
      .blog-container {
@@ -225,6 +204,12 @@
 
  }
 
+ .container {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+ }
 
  input {
      margin-bottom: 15px;
@@ -248,7 +233,6 @@
 
  .category {
      font-size: 1.3rem;
-     margin-top: 15px;
  }
 
  .name-conten {
@@ -367,33 +351,11 @@
 
  /* =================Navigasi============== */
  .btn-navigasi {
+     width: 55vh;
      display: flex;
      justify-content: space-between;
-     margin-top: 40px;
-     gap: 250px;
- }
+     margin-top: 20px;
 
- button {
-     display: flex;
-     text-align: center;
-     align-items: center;
-     justify-content: center;
-     width: 105px;
-     height: 35px;
-     background-color: black;
-     border-radius: 25px;
- }
-
- a button:hover {
-     border: black 2px solid;
-     background-color: rgba(122, 122, 122, 0.349);
-     color: black;
-     cursor: pointer;
- }
-
- a button {
-     color: white;
-     font-weight: bold;
  }
 
  /* ================= Container Blog ================= */
@@ -455,11 +417,7 @@
  }
 
  .article {
-     display: flex;
      text-align: justify;
-     flex-wrap: wrap;
-     overflow: hidden;
-     height: 110px;
  }
 
  .image-conten-blog {
@@ -470,8 +428,8 @@
 
  .icon-conten-blog {
      display: flex;
+
      flex-wrap: wrap;
-     height: 105px;
      gap: 15px;
      margin: 35px 0;
  }
@@ -482,7 +440,7 @@
 
 
 
- /* <!-- ==============Button blog============== --> */
+ /* <!-- ==============Button============== --> */
  .btn-conten-blog {
      display: flex;
      width: 100%;
@@ -524,4 +482,35 @@
      background-color: rgba(122, 122, 122, 0.349);
      cursor: pointer;
      color: black;
+ }
+
+ .btn-navigasi {
+     margin-top: 20px;
+     display: flex;
+     gap: 15px;
+     justify-content: center;
+ }
+
+ button {
+     display: flex;
+     text-align: center;
+     align-items: center;
+     justify-content: center;
+     width: max-content;
+     height: 35px;
+     background-color: black;
+     padding: 0 15px;
+     border-radius: 25px;
+ }
+
+ a button:hover {
+     border: black 2px solid;
+     background-color: rgba(122, 122, 122, 0.349);
+     color: black;
+     cursor: pointer;
+ }
+
+ a button {
+     color: white;
+     font-weight: bold;
  }

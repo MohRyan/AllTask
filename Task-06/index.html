@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ============= FavIcon ============== -->
+    <link rel="icon" type="image/png" href="/Navbar/faviconlogo.png">
+    <title>Task 06</title>
+    <!-- ============= IconFontAwesome ============== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- ============= FontGoogle ============== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- ============= Bootstrap ============== -->
+    <!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/js/bootstrap.js">
+ <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css"> -->
+    <!-- ============= CssExternal ============== -->
+    <link rel="stylesheet" href="/Navbar/navbar.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <!-- ======================= Nav =============================== -->
+    <div class="nav">
+        <div class="logo-nav">
+            <img src="/Navbar/dumbwaysputih.png" class="logo" alt="">
+        </div>
+        <div class="nav-sub">
+            <ul class="">
+                <li class=""><a href="#">Home</a></li>
+                <li class="">Add Project</li>
+                <li class=""><a href="#">Testimonial</a></li>
+                <li class=""><a href="#">All Task</a></li>
+            </ul>
+        </div>
+        <div class="contact-sub">
+            <a href="#">
+                <div class="contact">Contact Me</div>
+            </a>
+        </div>
+        <div class="tog-open" onclick="togOpen()">
+            <i class="fa-solid fa-hamburger"></i>
+        </div>
+    </div>
+    <div class="tog-sub">
+        <a href="#"><span>Home</span></a>
+        <a href="#"><span>Add Project</span></a>
+        <a href="#"><span class="active">Contact Me</span></a>
+        <a href="#"><span>Testimonial</span></a>
+        <a href="#"><span>All Task</span></a>
+        <div class="tog-close" onclick="togClose()">
+            <i class="fa-solid fa-arrow-up"></i>
+        </div>
+    </div>
+    <!-- ======================= EndNav =============================== -->
+    <div class="container">
+        <div class="form">
+            <h1>Responsive</h1>
+            <h2>ADD MY PROJECT</h2>
+            <div class="name-conten">
+                <span class="category">Project Name</span>
+                <input type="text" id="projectName" class="input name">
+            </div>
+            <!-- ==============inputDate============== -->
+            <div class="inp-date">
+                <div class="inp-start-date">
+                    <span class="category">Start Date</span>
+                    <input type="time" id="startDate" class="startDate">
+                </div>
+                <div class="inp-end-date">
+                    <span class="category">End Date</span>
+                    <input type="time" id="endDate" class="endDate">
+                </div>
+            </div>
+            <!-- ==============textArea============== -->
+            <div class="textArea">
+                <span class="category">Description</span>
+                <textarea name="description" id="description" cols="30" rows="10"></textarea>
+                <span class="category">Technologies</span>
+            </div>
+            <!-- ==============checkbox============== -->
+            <div class="checkbox-container">
+                <div class="baris1">
+                    <div class="box1">
+                        <input type="checkbox" id="NodeJs" value="nodeJs">
+                        <span>Node Js</span>
+                    </div>
+                    <div class="box2">
+                        <input type="checkbox" id="NextJs" value="nextJs">
+                        <span>Next Js</span>
+                    </div>
+                </div>
+                <div class="baris2">
+                    <div class="box3">
+                        <input type="checkbox" id="ReactJs" value="reactJs">
+                        <span>React Js</span>
+                    </div>
+                    <div class="box4">
+                        <input type="checkbox" id="TypeScript" value="typeScript">
+                        <span>TypeScript</span>
+                    </div>
+                </div>
+                <div class="baris3">
+                    <div class="box5">
+                        <input type="checkbox" id="ReactNative" value="reactnative">
+                        <span>ReactNative</span>
+                    </div>
+                    <div class="box6">
+                        <input type="checkbox" id="ReactRouter" value="reactrouter">
+                        <span>ReactRouter</span>
+                    </div>
+                </div>
+                <div class="baris4">
+                    <div class="box7">
+                        <input type="checkbox" id="Python" value="python">
+                        <span>Python</span>
+                    </div>
+                    <div class="box8">
+                        <input type="checkbox" id="Laravel" value="laravel">
+                        <span>Laravel</span>
+                    </div>
+                </div>
+            </div>
+            <!-- ==============Uploud Image============== -->
+            <div class="image-conten">
+                <span class="category">Upload Image</span>
+                <div class="imageUploud">
+                    <input type="file" id="image" class="image">
+                    <i class="fa-solid fa-paperclip"></i>
+                </div>
+            </div>
+            <!-- ==============button============== -->
+            <div class="btn-navigasi">
+                <a href="/06vidpres.html"><button>Video Presentasi</button></a>
+            </div>
+        </div>
+        <div class="blog">
+            <h1>MY PROJECT</h1>
+            <div class="blog-container">
+                <!-- ============ ContenPush ================ -->
+                <div class="blog-conten">
+                    <!-- ============ image ================ -->
+                    <div class="image-conten-blog">
+                        <img src="Task 1.PNG" alt="">
+                    </div>
+                    <!-- ============ data-blog ================ -->
+                    <div class="data-blog">
+                        <!-- ============ title ================ -->
+                        <div class="title">
+                            <span>Duwmbways Mobile App - 2021</span>
+                        </div>
+                        <div class="durasi">
+                            <span>durasi : 3 bulan</span>
+                        </div>
+                        <!-- ============ article ================ -->
+                        <span class="article">Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor
+                            sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.</span>
+                        <!-- ============ icon ================ -->
+                        <div class="icon-conten-blog">
+                            <i class="fa-brands fa-react"></i>
+                            <i class="fa-brands fa-python"></i>
+                            <i class="fa-brands fa-node"></i>
+                            <i class="fa-brands fa-node-js"></i>
+                            <i class="fa-brands fa-laravel"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-linkedin"></i>
+                        </div>
+                        <!-- ============ button ================ -->
+                        <div class="btn-conten-blog">
+                            <a href="/01vidpres.html" class="btn">Video</a>
+                            <a href="/index.html" class="btn">Back</a>
+
+                        </div>
+                    </div>
+                    <!-- ======================================== -->
+                </div>
+                <div class="blog-conten">
+                    <!-- ============ image ================ -->
+                    <div class="image-conten-blog">
+                        <img src="Task 1.PNG" alt="">
+                    </div>
+                    <!-- ============ data-blog ================ -->
+                    <div class="data-blog">
+                        <!-- ============ title ================ -->
+                        <div class="title">
+                            <span>Duwmbways Mobile App - 2021</span>
+                        </div>
+                        <div class="durasi">
+                            <span>durasi : 3 bulan</span>
+                        </div>
+                        <!-- ============ article ================ -->
+                        <span class="article">Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor
+                            sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.</span>
+                        <!-- ============ icon ================ -->
+                        <div class="icon-conten-blog">
+                            <i class="fa-brands fa-react"></i>
+                            <i class="fa-brands fa-python"></i>
+                            <i class="fa-brands fa-node"></i>
+                            <i class="fa-brands fa-node-js"></i>
+                            <i class="fa-brands fa-laravel"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-linkedin"></i>
+                        </div>
+                        <!-- ============ button ================ -->
+                        <div class="btn-conten-blog">
+                            <a href="/01vidpres.html" class="btn">Video</a>
+                            <a href="/index.html" class="btn">Back</a>
+                        </div>
+                    </div>
+                    <!-- ======================================== -->
+                </div>
+                <div class="blog-conten">
+                    <!-- ============ image ================ -->
+                    <div class="image-conten-blog">
+                        <img src="Task 1.PNG" alt="">
+                    </div>
+                    <!-- ============ data-blog ================ -->
+                    <div class="data-blog">
+                        <!-- ============ title ================ -->
+                        <div class="title">
+                            <span>Duwmbways Mobile App - 2021</span>
+                        </div>
+                        <div class="durasi">
+                            <span>durasi : 3 bulan</span>
+                        </div>
+                        <!-- ============ article ================ -->
+                        <span class="article">Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor
+                            sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.</span>
+                        <!-- ============ icon ================ -->
+                        <div class="icon-conten-blog">
+                            <i class="fa-brands fa-react"></i>
+                            <i class="fa-brands fa-python"></i>
+                            <i class="fa-brands fa-node"></i>
+                            <i class="fa-brands fa-node-js"></i>
+                            <i class="fa-brands fa-laravel"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-linkedin"></i>
+                        </div>
+                        <!-- ============ button ================ -->
+                        <div class="btn-conten-blog">
+                            <a href="/01vidpres.html" class="btn">Video</a>
+                            <a href="/index.html" class="btn">Back</a>
+
+                        </div>
+                    </div>
+                    <!-- ======================================== -->
+                </div>
+                <div class="blog-conten">
+                    <!-- ============ image ================ -->
+                    <div class="image-conten-blog">
+                        <img src="Task 1.PNG" alt="">
+                    </div>
+                    <!-- ============ data-blog ================ -->
+                    <div class="data-blog">
+                        <!-- ============ title ================ -->
+                        <div class="title">
+                            <span>Duwmbways Mobile App - 2021</span>
+                        </div>
+                        <div class="durasi">
+                            <span>durasi : 3 bulan</span>
+                        </div>
+                        <!-- ============ article ================ -->
+                        <span class="article">Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor
+                            sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.</span>
+                        <!-- ============ icon ================ -->
+                        <div class="icon-conten-blog">
+                            <i class="fa-brands fa-react"></i>
+                            <i class="fa-brands fa-python"></i>
+                            <i class="fa-brands fa-node"></i>
+                            <i class="fa-brands fa-node-js"></i>
+                            <i class="fa-brands fa-laravel"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-linkedin"></i>
+                        </div>
+                        <!-- ============ button ================ -->
+                        <div class="btn-conten-blog">
+                            <a href="/01vidpres.html" class="btn">Video</a>
+                            <a href="/index.html" class="btn">Back</a>
+
+                        </div>
+                    </div>
+                    <!-- ======================================== -->
+                </div>
+                <div class="blog-conten">
+                    <!-- ============ image ================ -->
+                    <div class="image-conten-blog">
+                        <img src="Task 1.PNG" alt="">
+                    </div>
+                    <!-- ============ data-blog ================ -->
+                    <div class="data-blog">
+                        <!-- ============ title ================ -->
+                        <div class="title">
+                            <span>Duwmbways Mobile App - 2021</span>
+                        </div>
+                        <div class="durasi">
+                            <span>durasi : 3 bulan</span>
+                        </div>
+                        <!-- ============ article ================ -->
+                        <span class="article">Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor
+                            sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.</span>
+                        <!-- ============ icon ================ -->
+                        <div class="icon-conten-blog">
+                            <i class="fa-brands fa-react"></i>
+                            <i class="fa-brands fa-python"></i>
+                            <i class="fa-brands fa-node"></i>
+                            <i class="fa-brands fa-node-js"></i>
+                            <i class="fa-brands fa-laravel"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-linkedin"></i>
+                        </div>
+                        <!-- ============ button ================ -->
+                        <div class="btn-conten-blog">
+                            <a href="/01vidpres.html" class="btn">Video</a>
+                            <a href="/index.html" class="btn">Back</a>
+
+                        </div>
+                    </div>
+                    <!-- ======================================== -->
+                </div>
+                <div class="blog-conten">
+                    <!-- ============ image ================ -->
+                    <div class="image-conten-blog">
+                        <img src="Task 1.PNG" alt="">
+                    </div>
+                    <!-- ============ data-blog ================ -->
+                    <div class="data-blog">
+                        <!-- ============ title ================ -->
+                        <div class="title">
+                            <span>Duwmbways Mobile App - 2021</span>
+                        </div>
+                        <div class="durasi">
+                            <span>durasi : 3 bulan</span>
+                        </div>
+                        <!-- ============ article ================ -->
+                        <span class="article">Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor
+                            sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.</span>
+                        <!-- ============ icon ================ -->
+                        <div class="icon-conten-blog">
+                            <i class="fa-brands fa-react"></i>
+                            <i class="fa-brands fa-python"></i>
+                            <i class="fa-brands fa-node"></i>
+                            <i class="fa-brands fa-node-js"></i>
+                            <i class="fa-brands fa-laravel"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-linkedin"></i>
+                        </div>
+                        <!-- ============ button ================ -->
+                        <div class="btn-conten-blog">
+                            <a href="/01vidpres.html" class="btn">Video</a>
+                            <a href="/index.html" class="btn">Back</a>
+
+                        </div>
+                    </div>
+                    <!-- ======================================== -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    function togOpen() {
+        let open = document.querySelector(".tog-sub");
+        // let togClose = document.querySelector
+        open.classList.add('active')
+
+        // open.classList.remove('active')
+
+    }
+
+    function togClose() {
+        let open = document.querySelector(".tog-sub");
+        open.classList.remove('active')
+        // open.classList.remove('active')
+
+    }
+</script>
+<script src="Navbar/navbar.js"></script>
+</body>
+
+</html>
