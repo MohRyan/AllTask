@@ -1,0 +1,23 @@
+OOP Konsep 
+
+01. Class Concept
+	a class simply is a template blueprint for creating object. it defines the properties and methods that an object will have
+	kelas hanyalah cetak biru templat untuk membuat objek. itu mendefinisikan properti dan metode yang akan dimiliki suatu objek
+02. Object Concept
+	when you create an object, you are creating an instance of a class. each instance of a class has its own set of properties and can perform its own set of methods
+	ketika Anda membuat sebuah objek, Anda membuat sebuah instance dari sebuah kelas. setiap instance dari suatu kelas mempunyai seperangkat propertinya sendiri dan dapat menjalankan serangkaian metodenya sendiri
+03. Inheritance Concept
+	inheritance is a mechanism that allows you to define a new class based on an existing class. the new class inherits all the properties and methods of the existing class and can also add new properties and methods of its own
+	pewarisan adalah mekanisme yang memungkinkan Anda mendefinisikan kelas baru berdasarkan kelas yang sudah ada. kelas baru mewarisi semua properti dan metode kelas yang ada dan juga dapat menambahkan properti dan metode barunya sendiri
+04. Polymorphism Concept
+	polymorphism is the ability of objects to take on many forms. in OOP, polymorphism classes to be treated as if they are of the same class, making it easir to write flexible and reusable code
+	polimorfisme adalah kemampuan objek untuk mengambil berbagai bentuk. dalam OOP, kelas polimorfisme diperlakukan seolah-olah mereka berasal dari kelas yang sama, sehingga memudahkan penulisan kode yang fleksibel dan dapat digunakan kembali
+05. Abstraction Concept
+	Abstraction is the process of cousing on the essential features of an object or system, while ignoring the non-essential details. in programming, abstraction allows us to create simplified models of complex systems that are easier to understand and work with
+	Abstraksi adalah proses mengabaikan fitur-fitur penting dari suatu objek atau sistem, sementara mengabaikan detail yang tidak penting. dalam pemrograman, abstraksi memungkinkan kita membuat model sederhana dari sistem kompleks yang lebih mudah dipahami dan dikerjakan.
+06. Encapsulation
+	don't get confused, abstraction and encapsulation are similar, but they have differences, the key point is that encapsulation also hiding implementation ( just as abstraction ) but just within a single unit or class, and encapsulation also primarily concerned with protecting the internal state of an object and ensuring that it can only be modified through well-defined methods
+	jangan bingung, abstraksi dan enkapsulasi serupa, tetapi mereka memiliki perbedaan, poin kuncinya adalah bahwa enkapsulasi juga menyembunyikan implementasi (seperti abstraksi) tetapi hanya dalam satu unit atau kelas, dan enkapsulasi juga terutama berkaitan dengan perlindungan keadaan internal suatu objek dan memastikan bahwa objek tersebut hanya dapat dimodifikasi melalui metode yang terdefinisi dengan baik
+
+
+
