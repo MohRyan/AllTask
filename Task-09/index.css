@@ -1,0 +1,91 @@
+ /* ======== Media Mobile============= */
+ @media only screen and (max-width: 622px) {}
+
+ /* ======== Media Tablet============= */
+ @media only screen and (min-width: 622px) {}
+
+ /* ======== Media Desktop/Laptop============= */
+ /* @media only screen and (min-width: 992px) {
+     
+ } */
+
+ body {
+     background-color: aqua;
+ }
+
+ .testimonial-container {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .rating ul {
+     display: flex;
+     gap: 15px;
+     margin: 10px 0;
+     align-items: center;
+ }
+
+ .rating ul li {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 55px;
+     height: 55px;
+     border-radius: 50%;
+     gap: 2px;
+     font-size: 1.1rem;
+     background-color: black;
+     color: white;
+     list-style: none;
+     margin-bottom: 5px;
+ }
+
+ .rating ul li:hover {
+     cursor: pointer;
+     color: black;
+     background-color: white;
+ }
+
+ .rating ul li.active {
+     color: black;
+     background-color: white;
+
+ }
+
+ .image-container {
+     display: flex;
+     justify-content: center;
+     gap: 15px;
+     flex-wrap: wrap;
+ }
+
+ .image {
+     padding: 10px;
+     background-color: white;
+     border-radius: 20px;
+     display: inherit;
+     flex-direction: column;
+ }
+
+ .image img {
+     border-radius: 10px 10px 0 0;
+     height: 350px;
+     object-fit: cover;
+     background-position: center;
+ }
+
+ .image span {
+     display: flex;
+     margin-top: 10px;
+     width: 450px;
+     height: 70px;
+     text-align: start;
+     /* background-color: aqua; */
+     font-size: 1.2rem;
+ }
+
+ .image h2 {
+     text-align: end;
+ }
