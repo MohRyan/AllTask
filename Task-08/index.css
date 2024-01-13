@@ -1,0 +1,114 @@
+section {
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+}
+
+.judul h1 {
+    /* margin-bottom: 50px; */
+    font-size: 1.5rem;
+}
+
+/* =======Testimonial====== */
+
+.testimonial-btn {
+    width: 150px;
+    height: 50px;
+    background-color: aqua;
+    font-weight: bold;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonial-btn:hover {
+    color: yellowgreen;
+    cursor: pointer;
+    border: solid 3px yellowgreen;
+    background-color: white;
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    flex-direction: column;
+    height: max-content;
+}
+
+#testimonial {
+    background-color: aqua;
+    height: 100vh;
+}
+
+.testimonial-container h1 {
+    margin-top: 70px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.image {
+    padding: 10px;
+    background-color: white;
+    border-radius: 20px;
+    display: inherit;
+    flex-direction: column;
+}
+
+.image img {
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+    background-position: center;
+}
+
+.image span {
+    margin: 15px;
+    font-size: 1.2rem;
+}
+
+.image h2 {
+    text-align: end;
+}
+
+.rating {}
+
+.rating ul {
+    display: flex;
+    gap: 15px;
+    margin: 10px 0;
+    align-items: center;
+}
+
+.rating ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    gap: 2px;
+    font-size: 1.1rem;
+    background-color: black;
+    color: white;
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+.rating ul li:hover {
+    cursor: pointer;
+    color: black;
+    background-color: white;
+}
+
+.rating ul li.active {
+    color: black;
+    background-color: white;
+
+}
