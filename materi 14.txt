@@ -1,0 +1,98 @@
+
+====== Package yang harus ditambah ======
+
+1. pg = npm i pg  => driver postgres Package buat postgresnya
+    yang isinya adalah info terkait database seperti user, namadb, password untuk menyambungkannya ke dbpostgres (pgAdmin4) 
+
+2. sequelize = npm install --save sequelize => ?? ORM ?? = table => object
+    sequelize merupakan penyedia layanan orm berbasis promise (janji)
+    untuk nodeJS dan bisa di konfigurasikan di berbagai dbsql (db table)
+
+3. sequelize ke db postgres = npm install --save pg pg-hstore => 
+    ini merupakan db yang bisa digunakan lewat sequelize yaitu 
+    postgres dengan menambahkan Package pg pg-hstore.
+
+4. Sequelize Command-Line Interface (CLI) = 
+    npm install --save-dev sequelize-cli => 
+    untuk mengelola perubahan pada kode sumber.
+
+====== Package yang harus ditambah didalam folder src ======
+
+cli init = npx sequelize-cli init => untuk menambahkan folder 
+    config = berisi file konfigurasi, ( yang memberi tahu CLI cara terhubung dengan database )
+    models = berisi semua model untuk proyek Anda ( untuk membuat file model )
+    migrations = berisi semua file migrasi ( menjalankan file model yang sudah dibuat )
+    seeders = berisi semua file benih ( membuat file demo )
+
+
+config 
+    berisikan informasi dimana didalamnya terdapat sebuah konfigurasi yang
+    menuju ke db tertentu, yang nantinya akan digunakan untuk bisa mengakses
+    db tersebut.
+
+models  = npx sequelize-cli model:generate --name User --attributes firstName:string,lastName:string,email:string
+    ini merupakan sebuah perintah untuk membuat model dengan nama User
+    dan masuk ke dalam folder models, beserta membuatkan file migrasi
+    dengan nama create-user.js di folder migrations
+
+migrasi = npx sequelize-cli db:migrate
+    sebuah perintah untuk membuat tabel pada db yang dituju dengan 
+    referensi tabel pada file create-user.js pada folder migrations
+
+    pada migrasi terdapat berbagai perintah :
+
+    npx sequelize-cli db:migrate:undo = untuk mengembalikan migrasi sebelumnya
+
+    -- '' -- :all = untuk membatalkan semua migrasi
+    -- '' -- :all --to namamigrasi = untuk kembali ke migrasi yang dituju
+ 
+seeders = npx sequelize-cli seed:generate --name demo-user (membuat model demo)
+    kurang lebihnya sama seperti migrasi, merupakan model yang dibuat 
+    untuk demo (percobaan / sampel uji)
+
+    pada seeders terdapat perintah yang hampir sama dengan migrasi :
+
+    npx sequelize-cli db:seed:all   (untuk menjalankan)
+
+    npx sequelize-cli db:seed:undo  (untuk kembali ke sebelumnya)
+
+    npx sequelize-cli db:seed:undo --seed name-of-seed-as-in-data 
+    (kembali ke seeders tertentu)
+
+    npx sequelize-cli db:seed:undo:all (untuk membatalkan semua seeders)
+
+
+
+yang nantinya sering digunakan
+
+======= migrate ========
+
+
+npx sequelize-cli model:generate --name User --attributes firstName:string,lastName:string,email:string
+
+npx sequelize-cli db:migrate
+
+npx sequelize-cli db:migrate:undo
+
+npx sequelize-cli db:migrate:undo:all
+
+npx sequelize-cli db:migrate:undo:all --to
+
+======= seeders ========
+
+npx sequelize-cli seed:generate --name demo-user
+
+npx sequelize-cli db:seed:all
+
+npx sequelize-cli db:seed:undo
+
+npx sequelize-cli db:seed:undo --seed name-of-seed-as-in-data 
+
+npx sequelize-cli db:seed:undo:all
+
+
+====== format pembuatan model
+
+=== untuk model db addBlog
+
+npx sequelize-cli model:generate --name blogs --attributes projectname:string,datestarterror:string,dateenderror:string,durasi:string,tech:array,tech1:array,description:text
