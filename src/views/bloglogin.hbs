@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ============= FavIcon ============== -->
+    <link rel="icon" type="image/png" href="assets/iconNlogo/faviconlogo.png">
+    <title>TASK 11</title>
+    <!-- ============= IconFontAwesome ============== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- ============= FontGoogle ============== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- ============= Bootstrap ============== -->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+  />
+    <!-- ============= CssExternal ============== -->
+    <link rel="stylesheet" href="/assets/css/navbar.css">
+</head>
+
+<body>
+    <!-- ======================= Nav =============================== -->
+    <div class="container-fluid shadow" id="addProject">
+        <div class="container justify-content-between">
+          <div class="row nav-bg py-2">
+            <div class="col-1 d-flex align-items-center justify-content-center">
+              <img
+                src="assets/iconNlogo/dumbwaysputih.png"
+                width="50"
+                height="35"
+                alt=""
+              />
+            </div>
+           <div class="col-10 p-0 d-flex justify-content-between pe-2">
+              <ul class="gap-4 h-100 d-md-flex align-items-center d-none">
+                <a href="/"><li class="">Home</li></a>
+                <a href="/blog"><li class="active-nav">AddProject</li></a>
+                <a href=""><li class="">Testimonial</li></a>
+                <a href=""><li class="">Testimonial</li></a>
+                <a href="/blog/halo"><li class="">AllTask</li></a>
+              </ul>
+              {{#if login}}
+            <ul class="gap-4 h-100 d-md-flex align-items-center d-none me-4">
+              <li class="fw-bold text-danger">Hello {{user}}</li>
+              <a href="/logout"><li>Log Out</li></a>
+            </ul>
+            {{else}}
+              <ul class="gap-4 h-100 d-md-flex align-items-center d-none me-4">
+              <a href="/register"><li>Register</li></a>
+              <a href="/login"><li>Log In</li></a>
+            </ul>
+            {{/if}}
+            </div>
+            <div class="col-1 d-flex align-items-center">
+              <i
+                class="fa-solid fa-hamburger d-md-none fs-2"
+                onclick="togOpen()"
+              ></i>
+              <button class="btn d-md-flex d-none btn-bg px-4 shadow">
+                Contact
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{!-- <div class="nav-sub-bg text-center d-md-none none" id="togle">
+        <ul class="d-flex text-center flex-column p-0 m-0">
+          <a href="" class="py-2 white m-2"><li>Home</li></a>
+          <a href="" class="py-2 active-togle m-2"><li>Add Project</li></a>
+          <a href="" class="py-2 white m-2"><li>Testimonial</li></a>
+          <a href="" class="py-2 white m-2"><li>All Task</li></a>
+        </ul>
+        <i class="fa-solid fa-arrow-up fs-2 my-2" onclick="togClose()"></i>
+      </div> --}}
+    <!-- ======================= EndNav =============================== -->
+    <div class="body d-flex justify-content-center align-items-center mb-5">
+    <div class="col-md-7 body d-flex flex-column p-0 m-0 align-items-center">
+        <form class="col-lg-8" action="/blog" method="post">
+            <h1 class="text-center mt-md-5 mt-3">Task 11 Post Blog</h1>
+            <h2 class="text-center">ADD MY PROJECT</h2>
+            <div class="name-conten mt-3">
+                <span class="">Project Name</span>
+                <input type="text" name="projectName" class="container p-0 ps-1 mt-2">
+            </div>
+            <!-- ==============inputDate============== -->
+            <div class="d-md-flex">
+                <div class="col-md-6 my-3 pe-md-3">
+                    <span class="">Start Date</span>
+                    <input type="date" required name="startDate" class="container p-0 ps-1 mt-2">
+                </div>
+                <div class="col-md-6 my-3">
+                    <span class="">End Date</span>
+                    <input type="date" name="endDate" required class="container p-0 ps-1 mt-2">
+                </div>
+            </div>
+            <!-- ==============textArea============== -->
+            <div class="d-flex flex-column">
+                <span class="mb-2">Description</span>
+                <textarea name="description" id="description" cols="30" rows="10" class="p-2"></textarea>
+            </div>
+            <!-- ==============checkbox============== -->
+            <div class="d-flex flex-column mt-2">
+                <span class="mb-1 mt-2">Technologies</span>
+                <div class="d-flex flex-column ">
+                    <div class="d-flex justify-content-md-evenly justify-content-between" >
+                    <div class="col-md-2">
+                        <input type="checkbox" name="tech" value="node-js">
+                        <span>NodeJs</span>
+                    </div>
+                    <div class="col-md-2">
+                        <input type="checkbox" name="tech" value="html5">
+                        <span>Html5</span>
+                    </div>
+                    <div class="col-md-2">
+                        <input type="checkbox" name="tech" value="react">
+                        <span>ReactJs</span>
+                    </div>
+                    <div class="col-md-2">
+                        <input type="checkbox" name="tech" value="js">
+                        <span>JS</span>
+                    </div>
+                    </div>
+                    <div class="d-flex justify-content-md-evenly justify-content-between">
+                    <div class="col-md-2">
+                        <input type="checkbox" name="tech1" value="java">
+                        <span>Java</span>
+                    </div>
+                    <div class="col-md-2">
+                        <input type="checkbox" name="tech1" value="vuejs">
+                        <span>VueJs</span>
+                    </div>
+                    <div class="col-md-2">
+                        <input type="checkbox" name="tech1" value="unity">
+                        <span>Unity</span>
+                    </div>
+                    <div class="col-md-2">
+                        <input type="checkbox" name="tech1" value="docker">
+                        <span>Docker</span>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+            <!-- ==============Uploud Image============== -->
+            <div class="my-2">
+                <span class="category">Upload Image</span>
+                <div class="d-flex justify-content-between uploud bg-white align-items-center pe-2 rounded-2 text-secondary shadow">
+                    <input type="file" id="image" class="image mt-1">
+                    <i class="fa-solid fa-paperclip"></i>
+                </div>
+            </div>
+            
+            <div class="d-flex justify-content-end gap-5 mt-4">
+                {{#if login}}
+                <button class="btn btn-dark" type="submit">Add</button>
+                {{else}}
+                <a href="#myProject" class="btn btn-dark"><span>My Project</span></a>
+                {{/if}}
+            </div>
+                {{!-- {{#if login}}
+                <button class="btn btn-dark" type="submit">Add</button>
+                {{/if}} --}}
+            
+        </form>
+    </div>
+    </div>
+    <div class="silver auto-height">
+        <div class="body silver pb-3" id="myProject">
+        <h1 class="text-center pt-2">MY PROJECT</h1>
+        {{#if login}}
+        <div class="d-flex justify-content-center my-5">
+          <a class="btn btn-dark" href="/bloglogin#addProject"><span>Add Project</span></a>
+        </div>
+        {{/if}}
+        <div class="d-flex justify-content-center flex-wrap container gap-4" id="conten-blog">
+            <!-- ============ ContenPush ================ -->
+            {{#each dataBlog}}
+            <div class="w-auto px-3 pt-3 pb-2 bg-white rounded-2 shadow">
+                <!-- ============ image ================ -->
+                <div class="d-flex justify-content-center">
+                    <img src="assets/image/Task 2.PNG" width="350" height="250" alt="">
+                </div>
+                <!-- ============ data-blog ================ -->
+                <div class="data-blog">
+                    <!-- ============ title ================ -->
+                    <div class="mt-1 fw-bold" style="width: 350px;">
+                        {{!-- <a href="blogDetail/{{id}}"><span>{{projectName}}</span></a> --}}
+                        <a href="blogDetailLogin/{{this.id}}"><span>{{projectname}}</span></a>
+                        
+                    </div>
+                    <div class="fs-6">
+                        <!-- <span>durasi : ${blogAdd[index].durasi}</span> -->
+                        <span style="color: silver; line-height: none;">durasi : {{durasi}}</span>
+                    </div>
+                    <!-- ============ article ================ -->
+                    <div class="row m-0 my-2" >
+                        <span class="p-0 overflow-auto pe-2" style="width: 350px; height: 100px; text-align: justify;">{{description}}</span>
+                    </div>
+                    <!-- ============ icon ================ -->
+                    <div class="fs-1 d-flex gap-3 justify-content-center flex-column" style="height: 110px;">
+                        <div class="d-flex gap-4 justify-content-center">
+                            {{#each tech}}
+                            <i class="fa-brands fa-{{this}}"></i>
+                            {{/each}}
+                        </div>
+                        <div class="d-flex gap-4 justify-content-center">
+                            {{#each tech1}}
+                            <i class="fa-brands fa-{{this}}"></i>
+                            {{/each}}
+                        </div>
+                    </div>
+                    <!-- ============ button ================ -->
+                    {{#if login}}
+                        <div class="row mt-2 px-3 py-1 gap-2"><a href="editDetailLogin/{{id}}"class="col text-center bg-dark rounded-2 text-white"
+                    >Edit</a>
+                    <a href="delete/{{id}}" class="col text-center bg-dark rounded-2 text-white"
+                    >Delete</a>
+                </div>
+                {{else}}
+                <div class="row mt-2 px-3 py-1 gap-2">
+                <a href="blogDetailLogin/{{id}}" class="col text-center bg-dark rounded-2 text-white" >Review</a>
+                </div>
+                {{/if}}
+                </div>
+                <!-- ======================================== -->
+            </div>
+            {{/each}}
+        </div>
+    </div>
+    </div>
+    
+    </body>
+<style>
+    .body {
+        height: auto;
+    }
+
+    .auto-height{
+        height: 100vh;
+    }
+
+    .silver {
+        background-color: silver
+    }
+
+    .image::-webkit-file-upload-button {
+        border: none;
+        width: 100px;
+        background-color: silver;
+        border-radius: 5px;
+        margin: 0;
+        padding: 5px;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+    .image::-webkit-file-upload-button:hover{
+        color: white;
+    }
+    
+    .uploud:hover {
+        cursor: pointer;
+    }
+
+</style>
+</script>
+{{!-- <script src="/assets/js/navbar.js"></script> --}}
+<!-- <script src="assets/code/Js/04.js"></script> -->
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-bg {
+    /* background-color: rgb(231, 231, 231); */
+}
+
+.nav-sub-bg {
+    background-color: rgb(207, 207, 207);
+    position: absolute;
+    width: 100vw;
+
+}
+
+.btn-bg {
+    background-color: black;
+    color: white;
+}
+
+.btn-bg:hover {
+    background-color: white;
+    color: black;
+}
+
+.active-nav {
+    color: red;
+    font-weight: bold;
+}
+
+.active-togle,
+.active-togle li {
+    background-color: red;
+    font-weight: bold;
+    color: white;
+}
+
+.white {
+    background: white;
+}
+
+.white:hover {
+    background-color: burlywood;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+li,
+a {
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+
+li:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+i:hover {
+    color: brown;
+    cursor: pointer;
+}
+
+.none {
+    display: none;
+}

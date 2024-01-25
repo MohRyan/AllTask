@@ -1,0 +1,18 @@
+auth
+enkripsi
+session
+
+package yang harus di install
+
+bcrypt = npm i bcrypt
+require('bcrypt')
+
+express session = npm i express-session
+require('express-session')
+
+express flash = npm i express-flash
+require('express-flash')
+
+
+
+
