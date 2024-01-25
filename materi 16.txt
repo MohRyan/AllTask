@@ -1,0 +1,77 @@
+one to one
+one to many
+many to many
+
+inner join
+left join
+right join
+full join
+
+primary key = 
+
+foreign key = 
+
+penggunaan foreign key kedalam migrate ==================================
+
+references {model dan key}
+
+references = perintah / penggunaan referensi tabel yang akan di tuju
+
+model = tabel / model yang dituju
+
+key = sebagai init foreign key dan valuenya mengikuti berdasarkan tabel yang akan di relasikan
+
+example tabel 1 punya id lalu di tabel 2 terdapat column bernama addres, addres di init sebagai foreign key yang 
+valuenya berdasarkan id dari tabel 1.
+
+ondelete = cascade
+onupdate = cascade
+
+
+
+4 pengaturan didalam foreign key : ==========================
+
+1. RESCRICT 	= menolak perubahan tabel => ada relasi antara tabel A dan B namun yg di ubah hanya tabel A maka 
+		  			     perubahan itu tidak diperbolehkan selama data tabel A masih mempunyai 
+					     relasi ke data tabel B.
+
+2. CASCADE 	= sama-sama berubah => 	ketika perubahan terjadi pada salah satu tabel maka tabel yang mempunyai relasi
+				       	akan ikut berubah (perubahan pada baris).
+
+3. SET NULL 	= mengkosongkan	=> ketika terjadi perubahan pada tabel A maka baris/data yang ada pada tabel B akan menjadi
+				   NULL dengan syarat kolomnya tidak mempunyai setting NOT NULL.
+
+4. NO ACTION 	= tidak berubah => tidak akan merubah apapun meski salah satu table ada yg dirubah ( standar SQL ).
+
+order by blogs desc
+
+========= Package Multer ======== untuk membaca type file/image pada inputan
+npm i multer
+enctype="multipart/form-data"
+
+
+/\s/g
+
+
+on = sama dengan penggunaan WHERE
+
+as = alias / lebih tepatnya mengganti nama column sementara / permanent???
+
+
+
+terdapat cara untuk mempersingkat penggunaan query =============================
+
+from namaTable T (inisial singkat) = penggunaan T.id T.name T.email dll
+
+
+
+untuk mementukan posisi dari penggunaan relasi tabel =================================
+
+from namatabel INNER JOIN nama5 
+
+namatabel merupakan tabel 1 dengan posisi left / kiri
+
+nama5 merupakan tabel 2 dengan posisi right /kanan
+
+
+npx sequelize-cli model:generate --name blogs --attributes projectname:string,datestarterror:string,dateenderror:string,durasi:string,tech:array,tech1:array,description:text,image:string,author:integer

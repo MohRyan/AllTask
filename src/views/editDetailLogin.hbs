@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ============= FavIcon ============== -->
+    <link rel="icon" type="image/png" href="/assets/iconNlogo/faviconlogo.png">
+    <title>TASK 11</title>
+    <!-- ============= IconFontAwesome ============== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- ============= FontGoogle ============== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- ============= Bootstrap ============== -->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+  />
+    <!-- ============= CssExternal ============== -->
+    <link rel="stylesheet" href="/assets/css/navbar.css">
+</head>
+
+<body>
+    <div class="body d-flex justify-content-center align-items-center">
+    <div class="col-md-7 body d-flex flex-column p-0 m-0 align-items-center" id="addProject">
+        <form class="col-lg-8" method="post" enctype="multipart/form-data">
+            <h1 class="text-center mt-md-5 mt-3">Task 11 Edit Blog</h1>
+            <h2 class="text-center">EDIT {{dataBlog.projectname}}</h2>
+            <div class="name-conten mt-3">
+                <div class="d-flex justify-content-between">
+                <span class="me-3">Project Name</span>
+                <span class="text-end">Project Name Before : {{dataBlog.projectname}}</span>
+                </div>
+                <input type="text" name="projectName" value="{{dataBlog.projectname}}" class="container p-0 ps-1 mt-2">
+            </div>
+            <!-- ==============inputDate============== -->
+            <div class="d-md-flex">
+                <div class="col-md-6 my-3 pe-md-3">
+                    <div class="d-flex justify-content-between">
+                    <span class="me-3">Start Date</span>
+                    <span>Date Before : {{dataBlog.datestarterror}}</span>
+                    </div>
+                    <input type="date" name="startDate" class="container p-0 ps-1 mt-2">
+                </div>
+                <div class="col-md-6 my-3">
+                    <div class="d-flex justify-content-between">
+                    <span class="me-3">End Date</span>
+                    <span>Date Before : {{dataBlog.dateenderror}}</span>
+                    </div>
+                    <input type="date" name="endDate" class="container p-0 ps-1 mt-2">
+                </div>
+            </div>
+            <!-- ==============textArea============== -->
+            <div class="d-flex flex-column">
+                <span class="mb-2">Description</span>
+                <textarea name="description" id="description" cols="30" rows="10" class="p-2">{{dataBlog.description}}</textarea>
+            </div>
+            <!-- ==============checkbox============== -->
+            <div class="d-flex flex-column mt-2">
+                <span>Tech Before</span>
+                <div class="gap-2 d-flex justify-content-center">
+                {{#each dataBlog.tech}}
+                <i class="fa-brands fa-{{this}} my-2 me-3 fs-6"><span class="ms-2" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">{{this}}</span></i>
+                {{/each}}
+                {{#each dataBlog.tech1}}
+                <i class="fa-brands fa-{{this}} my-2 me-3 fs-6"><span class="ms-2" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">{{this}}</span></i>
+                {{/each}}
+                </div>
+                <span class="mb-1 mt-2 me-3">Technologies</span>
+                <div class="d-flex flex-column ">
+                    <div class="d-flex justify-content-md-evenly justify-content-between" >
+                    <div class="col-md-2">
+                        <input type="checkbox" name="tech" value="node-js">
+                        <span name="techname" value="Node Js">NodeJs</span>
+                    </div>
+                    <div class="col-md-2">
+                        <input type="checkbox" name="tech" value="html5">
+                        <span>Html5</span>
+                    </div>
+                    <div class="col-md-2">
+                        <input type="checkbox" name="tech" value="react">
+                        <span>ReactJs</span>
+                    </div>
+                    <div class="col-md-2">
+                        <input type="checkbox" name="tech" value="js">
+                        <span>JS</span>
+                    </div>
+                    </div>
+                    <div class="d-flex justify-content-md-evenly justify-content-between">
+                    <div class="col-md-2">
+                        <input type="checkbox" name="tech1" value="java">
+                        <span>Java</span>
+                    </div>
+                    <div class="col-md-2">
+                        <input type="checkbox" name="tech1" value="vuejs">
+                        <span>VueJs</span>
+                    </div>
+                    <div class="col-md-2">
+                        <input type="checkbox" name="tech1" value="unity">
+                        <span>Unity</span>
+                    </div>
+                    <div class="col-md-2">
+                        <input type="checkbox" name="tech1" value="docker">
+                        <span>Docker</span>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+            <!-- ==============Uploud Image============== -->
+            <div class="my-2">
+                <span class="category">Upload Image</span>
+                <div class="d-flex justify-content-between uploud bg-white align-items-center pe-2 rounded-2 text-secondary shadow">
+                    <input type="file" id="image" name="imageEdit" class="image mt-1">
+                    <i class="fa-solid fa-paperclip"></i>
+                </div>
+            </div>
+            <div class="d-flex justify-content-around mt-4">
+                <a class="btn btn-dark" href="/bloglogin#myProject">Batal</a>
+                <button class="btn btn-dark" type="submit">Update</button>
+            </div>
+        </form>
+    </div>
+    </div>
+    </body>
+<style>
+    .body {
+        height: 100vh;
+    }
+
+    .silver {
+        background-color: silver
+    }
+
+    .image::-webkit-file-upload-button {
+        border: none;
+        width: 100px;
+        background-color: silver;
+        border-radius: 5px;
+        margin: 0;
+        padding: 5px;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+    .image::-webkit-file-upload-button:hover{
+        color: white;
+    }
+    
+    .uploud:hover {
+        cursor: pointer;
+    }
+
+    span {
+        font-weight: bold;
+    }
+
+</style>
+</script>
+<script src="/assets/js/navbar.js"></script>
+<!-- <script src="assets/code/Js/04.js"></script> -->
+</body>
+
+</html>
